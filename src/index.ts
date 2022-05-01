@@ -16,7 +16,9 @@ btnEnviar.addEventListener("click", () => {
   let numero2: number = Number(dato2.value);
   let numero3: number = Number(dato3.value);
 
-  if (numero1 > numero2 && numero1 > numero3) {
+  if (numero1 == numero2 || numero1 == numero3 || numero2 == numero3) {
+    console.log("Los números deben ser diferentes");
+  } else if (numero1 > numero2 && numero1 > numero3) {
     console.log("El mayor de los tres es: ", numero1);
   } else if (numero1 < numero2 && numero2 > numero3) {
     console.log("El mayor de los tres es: ", numero2);
